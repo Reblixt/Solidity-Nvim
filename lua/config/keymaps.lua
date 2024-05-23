@@ -3,6 +3,6 @@
 -- Add any additional keymaps here
 -- Use vim.keymap.set
 
-vim.api.nvim_set_keymap("n", "<leader>cpc", ":CopilotChat<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>cpe", ":CopilotChatExplain<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<leader>cpf", ":CopilotChatFix<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-f>", "", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-f>", "", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<C-f>", "", { noremap = true, silent = true })
