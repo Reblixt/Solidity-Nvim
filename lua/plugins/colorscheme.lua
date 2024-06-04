@@ -3,6 +3,7 @@ return {
   lazy = true,
   name = "catppuccin",
   priority = 1000,
+  enabled = true,
   opts = {
     transparent_background = true,
     flavour = "mocha",
@@ -45,11 +46,11 @@ return {
       mocha = function(colors)
         return {
           -- Anpassade highlights för Solidity
-          SolidityKeyword = { fg = colors.pink },
-          SolidityType = { fg = colors.yellow },
-          SolidityConstant = { fg = colors.green },
-          SolidityFunction = { fg = colors.blue },
-          SolidityComment = { fg = colors.surface1, italic = true },
+          solidityTSKeyword = { fg = colors.pink },
+          solidityTSType = { fg = colors.yellow },
+          solidityTSConstant = { fg = colors.green },
+          solidityTSFunction = { fg = colors.blue },
+          solidityTSComment = { fg = colors.surface1, italic = true },
         }
       end,
     },
