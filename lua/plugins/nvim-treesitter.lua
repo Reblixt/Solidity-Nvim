@@ -75,6 +75,7 @@ return {
       "xml",
       "yaml",
       "graphql",
+      "prisma",
     },
     incremental_selection = {
       enable = true,

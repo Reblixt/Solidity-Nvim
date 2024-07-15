@@ -6,3 +6,8 @@
 vim.api.nvim_set_keymap("n", "<C-f>", "", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-f>", "", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<C-f>", "", { noremap = true, silent = true })
+
+-- -- Ändra navigeringskeymappings
+-- vim.api.nvim_set_keymap("n", "t", "j", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "c", "k", { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "n", "l", { noremap = true, silent = true })
