@@ -98,9 +98,10 @@ return {
             },
           },
         },
-        require("lspconfig").solidity_ls.setup({
-          -- require("lspconfig").solidity_ls_nomicfoundation.setup({
-          cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+        -- Solidity LSP with Nomic Foundation's Solidity Language Server
+        require("lspconfig").solidity_ls_nomicfoundation.setup({
+          -- cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+          on_attach = LazyVim.lsp.on_attach,
           filetypes = { "solidity" },
           root_dir = require("lspconfig.util").root_pattern(
             "hardhat.config.js",
@@ -119,32 +120,12 @@ return {
             solidity = {
               includePath = { "" },
               remappings = {
-                ["@openzeppelin/contracts"] = "node_modules/@openzeppelin/contracts",
+                ["@openzeppelin/"] = "node_modules/@openzeppelin/",
                 ["forge-std"] = "lib/forge-std/src",
-                ["@openzeppelin/contracts-upgradeable"] = "node_modules/@openzeppelin/contracts-upgradeable",
               },
-              -- allowPaths = { "node_modules/@openzeppelin/contracts" },
-              allowPaths = { "@openzeppelin/contracts", "lib/forge-std/src", "@openzeppelin/contracts-upgradeable" },
             },
           },
         }),
-        -- solidity_ls_nomicfoundation = {
-        -- solidity_ls = {
-        --   filetypes = { "solidity" },
-        --   -- cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
-        --   root_dir = require("lspconfig.util").root_pattern("foundry.toml", "hardhat.config.*"),
-        --   single_file_support = true,
-        --
-        --   settings = {
-        --     solidity = {
-        --       includePath = { "" },
-        --       remappings = {
-        --         ["@openzeppelin/contracts"] = "node_modules/@openzeppelin/contracts",
-        --         ["forge-std"] = "lib/forge-std/src",
-        --       },
-        --     },
-        --   },
-        -- },
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
