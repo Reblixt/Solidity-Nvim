@@ -6,3 +6,4 @@ local opt = vim.opt
 
 opt.clipboard = "unnamedplus"
 opt.scrolloff = 12
+opt.spelllang = { "en", "sv" }
