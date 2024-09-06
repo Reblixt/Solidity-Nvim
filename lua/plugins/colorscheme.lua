@@ -42,25 +42,25 @@ return {
       treesitter_context = true,
       which_key = true,
     },
-    highlight_overrides = {
-      mocha = function(colors)
-        return {
-          -- Anpassade highlights för Solidity
-          solidityTSKeyword = { fg = colors.pink },
-          solidityTSType = { fg = colors.yellow },
-          solidityTSConstant = { fg = colors.green },
-          solidityTSFunction = { fg = colors.blue },
-          solidityTSComment = { fg = colors.surface1, italic = true },
-          -- Anpassade highlights för GraphQL
-          graphqlKeyword = { fg = colors.mauve },
-          graphqlType = { fg = colors.peach },
-          graphqlField = { fg = colors.blue },
-          graphqlArgument = { fg = colors.yellow },
-          graphqlDirective = { fg = colors.pink, italic = true },
-          graphqlFragment = { fg = colors.teal },
-          graphqlComment = { fg = colors.surface1, italic = true },
-        }
-      end,
-    },
+    -- highlight_overrides = {
+    --   mocha = function(colors)
+    --     return {
+    --       -- Anpassade highlights för Solidity
+    --       solidityTSKeyword = { fg = colors.pink },
+    --       solidityTSType = { fg = colors.yellow },
+    --       solidityTSConstant = { fg = colors.green },
+    --       solidityTSFunction = { fg = colors.blue },
+    --       solidityTSComment = { fg = colors.surface1, italic = true },
+    --       -- Anpassade highlights för GraphQL
+    --       graphqlKeyword = { fg = colors.mauve },
+    --       graphqlType = { fg = colors.peach },
+    --       graphqlField = { fg = colors.blue },
+    --       graphqlArgument = { fg = colors.yellow },
+    --       graphqlDirective = { fg = colors.pink, italic = true },
+    --       graphqlFragment = { fg = colors.teal },
+    --       graphqlComment = { fg = colors.surface1, italic = true },
+    --     }
+    --   end,
+    -- },
   },
 }

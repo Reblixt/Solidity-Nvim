@@ -126,6 +126,33 @@ return {
             },
           },
         }),
+        require("lspconfig").solidity_ls.setup({
+          -- cmd = { "nomicfoundation-solidity-language-server", "--stdio" },
+          on_attach = LazyVim.lsp.on_attach,
+          filetypes = { "solidity" },
+          root_dir = require("lspconfig.util").root_pattern(
+            "hardhat.config.js",
+            "hardhat.config.ts",
+            "foundry.toml",
+            "remappings.txt",
+            "truffle.js",
+            "truffle-config.js",
+            "ape-config.yaml",
+            ".git",
+            "package.json"
+          ),
+          single_file_support = true,
+
+          settings = {
+            solidity = {
+              includePath = { "" },
+              remappings = {
+                ["@openzeppelin/"] = "node_modules/@openzeppelin/",
+                ["forge-std"] = "lib/forge-std/src",
+              },
+            },
+          },
+        }),
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
